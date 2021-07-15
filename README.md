@@ -1,0 +1,3 @@
+# Creative platform
+
+### `npm start`
