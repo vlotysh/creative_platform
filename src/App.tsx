@@ -4,6 +4,7 @@ import './App.css';
 import Select from "./Select";
 import Tabs from "./Tabs";
 import TabItem from "./TabItem";
+import FileDrop from "./FileDrop";
 
 function App() {
     let choices = [
@@ -30,6 +31,9 @@ function App() {
                       Dolor sit amet
                   </TabItem>
               </Tabs>
+          </p>
+          <p>
+              <FileDrop handleDrop={console.log}/>
           </p>
       </header>
     </div>
