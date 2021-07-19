@@ -5,6 +5,8 @@ import Select from "./Select";
 import Tabs from "./Tabs";
 import TabItem from "./TabItem";
 import FileDrop from "./FileDrop";
+import Clicker from "./Clicker";
+import Main from "./Modal";
 
 function App() {
     let choices = [
@@ -35,6 +37,13 @@ function App() {
           <p>
               <FileDrop handleDrop={console.log}/>
           </p>
+          <p>
+              <Main />
+          </p>
+          <p>
+              <Clicker />
+          </p>
+
       </header>
     </div>
   );
