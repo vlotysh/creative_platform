@@ -21,12 +21,12 @@ class Modal extends React.Component {
         // state to Modal and only render the children when Modal
         // is inserted in the DOM tree.
         // @ts-ignore
-        modalRoot.appendChild(this.el);
+        //modalRoot.appendChild(this.el);
     }
 
     componentWillUnmount() {
         // @ts-ignore
-        modalRoot.appendChild(this.el);
+       // modalRoot.appendChild(this.el);
     }
 
     render() {
