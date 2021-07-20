@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import avatar from './avatar.jpeg';
-import './App.css';
+import './App.scss';
 import Select from "./Select";
 import Tabs from "./Tabs";
 import TabItem from "./TabItem";
