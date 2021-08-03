@@ -9,6 +9,7 @@ import Clicker from "./Clicker";
 import Main from "./Modal";
 import Modal from "./Component/Modal/Modal";
 import MappedTable from "./Component/Table/MappedTable";
+import Toggle from "./Component/Toogle/Toggle";
 
 interface State {
     show: any; //replace any with suitable type
@@ -84,6 +85,10 @@ class App extends Component<{}, State> {
                         <h1>Table</h1>
                         <MappedTable data={people} propertyNames={propertyNames} />
                     </p>
+                    <Toggle>
+                        <h3>Title</h3>
+                        <p>Text</p>
+                    </Toggle>
                 </header>
             </div>
         )

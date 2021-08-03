@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 const modalRoot = document.getElementById('modal-root');
 
-class Modal extends React.Component {
+class Modal extends Component<any, any> {
     private el: any;
 
     constructor(props: any) {
@@ -36,21 +36,18 @@ class Modal extends React.Component {
         );
     }
 }
-class Main extends React.Component {
+class Main extends Component<any, any> {
     constructor(props: any) {
         super(props);
         this.state = {clicks: 0};
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
+    handleClick = () => {
         // This will fire when the button in Child is clicked,
         // updating Parent's state, even though button
         // is not direct descendant in the DOM.
-        this.setState(state => ({
-            // @ts-ignore
-            clicks: state.clicks + 1
-        }));
+        this.setState({ clicks: this.state.clicks + 1});
     }
 
     render() {
