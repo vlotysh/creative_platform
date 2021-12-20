@@ -21,17 +21,7 @@ class App extends Component<{}, State> {
         this.state = {
             show: false
         };
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
     }
-
-    showModal = () => {
-        this.setState({ show: true });
-    };
-
-    hideModal = () => {
-        this.setState({ show: false });
-    };
 
     render() {
         let choices = [
@@ -74,13 +64,9 @@ class App extends Component<{}, State> {
                     <p>
                         <Clicker/>
                     </p>
-                    <Modal show={this.state.show} handleClose={this.hideModal}>
+                    <Modal>
                         <p>Modal 123</p>
                     </Modal>
-
-                    <button type="button" onClick={this.showModal}>
-                        Open
-                    </button>
                     <p>
                         <h1>Table</h1>
                         <MappedTable data={people} propertyNames={propertyNames} />
