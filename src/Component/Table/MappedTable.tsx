@@ -17,7 +17,7 @@ class MappedTable extends Component<any, any> {
         this.filteredData = data.map(v =>
             Object.keys(v)
                 .filter(k => propertyNames.includes(k))
-                .reduce((acc: any, key) => ((acc[key] = v[key]), acc), {})
+                .reduce(function (acc: any, key) {acc[key] = v[key]; return acc}, {})
         );
     }
 

@@ -1,6 +1,5 @@
 import React from "react";
 import './Tab.css';
-import TabItem from "./TabItem";
 
 export interface iTabsProps {
     onTabClick: Function;
@@ -22,6 +21,7 @@ function Tabs(props: iTabsProps) {
             <div className="tab-menu">
                 {items.map(({ props: { index, label } }) => (
                     <button
+                        key={index}
                         onClick={() => changeTab(index)}
                         className={bindIndex === index ? "focus" : ""}
                     >

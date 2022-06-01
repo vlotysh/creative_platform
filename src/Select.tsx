@@ -10,8 +10,9 @@ function Select({
         <select
             disabled={disabled}
             onChange={({ target : { value } }) => callback(value)}
+            defaultValue={selected}
         >
-            {values.map(([value, text]) => <option selected={selected === value} value={value}>{text}</option>)}
+            {values.map(([value, text]) => <option key={value} value={value}>{text}</option>)}
         </select>
     );
 }
